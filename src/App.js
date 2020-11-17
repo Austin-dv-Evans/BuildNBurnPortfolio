@@ -4,6 +4,7 @@ import Home from './components/'
 import './App.css';
 import Resume from './components/Resume'
 import { Route } from "react-router-dom"
+import Portfolio from './components/Portfolio';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <CssBaseline />
     <Route exact path="/" component={Home} />
     <Route path="/resume" component={Resume} />
+    <Route path="/portfolio" component={Portfolio} />
     </>
   );
 }
