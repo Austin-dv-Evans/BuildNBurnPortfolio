@@ -13,11 +13,10 @@ import {
     Divider,
     List,
     Typography,
-    Box,
-    Menu
+    Box
+    // Menu
 } from "@material-ui/core";
 import { 
-    ArrowBack,
     AssignmentInd,
     Home,
     Apps,
@@ -25,7 +24,7 @@ import {
     
  } from "@material-ui/icons";
 import MenuIcon from '@material-ui/icons/Menu';
-
+import Footer from './Footer'
 import profile from '../profile.jpg'
 
 
@@ -67,7 +66,7 @@ const menuItems = [
     {
     listIcon: <ContactMail/>,
     listText: "Contact",
-    listPath: "/contact"
+    listPath: "/contacts"
     },
 ]
 
@@ -106,7 +105,6 @@ const Navbar = () => {
 
     return (
         <>
-        
             <Box component="nav">
                 <AppBar position="static" style={{background: "#222"}}>
                     <Toolbar>
@@ -121,6 +119,7 @@ const Navbar = () => {
                             onClose={toggleSlider("right", false)}
                             open={state.right}>
                             {sideList("right")}
+                            <Footer />
                         </MobileRightMenuSlider>
                     </Toolbar>
                 </AppBar>
